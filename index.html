@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> mockups </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+        <!-- CSS/Scripts -->
+        <link rel="stylesheet" href="src/css/index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        
+        <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="src/js/index.js"></script>
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Eczar|Over+the+Rainbow|VT323" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row mt-1">
+                <div class="col-12">
+                    <h1 class="display-2 text-muted vt323">mockups</h1>
+                </div>
+            </div>
+            <div class="row mt-0 mx-auto">
+                <div class="col-12 col-lg-8">
+                    <div id="noCanvasChosen" class="card bg-transparent card-custom-height my-2 mx-auto">
+                        <div class="card-body mt-5 pt-5">
+                            <h1 class="display-4 text-muted text-center vt323 mt-5 pt-5">create canvas</h1>
+                            <p class="text-muted text-center vt323">to create your social media mock up, you need a canvas</p>
+                        </div>
+                    </div>
+                    <div id="canvasCont" class="card my-2 mx-auto animated bounceInDown d-none">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <legend id="canvasTypeLabel" class="text-muted vt323">
+                                        <i class="fab fa-twitter mr-2"></i>mock tweet
+                                    </legend>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-lg-9 mt-2">
+                                    <input type="text" class="form-control form-control-lg vt323" placeholder="canvas name">
+                                </div>
+                                <div class="col-12 col-lg-3 mt-2">
+                                    <button type="button" class="btn btn-lg btn-block btn-dark vt323">
+                                        <i class="fas fa-trash mr-1"></i> discard
+                                    </button>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <canvas id="mockupCanvas" class="bg-dark mx-auto" width="375px" height="667px"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 my-3">
+                    <h1 class="text-muted vt323">
+                        inspector<small><i class="fas fa-tools ml-2"></i></small>
+                    </h1>
+                    <div class="card">
+                        <div class="card-body">
+                            <legend class="vt323 text-right">
+                                canvas<i class="far fa-square ml-2"></i>
+                            </legend>
+                            <button id="twitter" type="button" class="btn btn-lg btn-block btn-dark vt323 my-2"
+                                onclick="choosePlatform(0)">
+                                <i class="fab fa-twitter mr-2"></i>twitter
+                            </button>
+                            <div id="twCanvasTypes" class="row my-2 d-none animated zoomInUp">
+                                <div class="col">
+                                    <button type="button" class="btn btn-lg btn-block btn-dark vt323"
+                                        onclick="chooseCanvas('profile', 0)">
+                                        <i class="fas fa-portrait mr-2"></i> profile
+                                    </button>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-lg btn-block btn-dark vt323"
+                                        onclick="chooseCanvas('tweet', 0)">
+                                        <i class="fas fa-sticky-note mr-2"></i> tweet
+                                    </button>
+                                </div>
+                            </div>
+                            <button id="facebook" type="button" class="btn btn-lg btn-block btn-dark vt323 my-2"
+                                onclick="choosePlatform(1)">
+                                <i class="fab fa-facebook-f mr-2"></i> facebook
+                            </button>
+                            <div id="fbCanvasTypes" class="row my-2 d-none animated zoomInUp">
+                                <div class="col">
+                                    <button type="button" class="btn btn-lg btn-block btn-dark vt323"
+                                        onclick="chooseCanvas('profile', 1)">
+                                        <i class="fas fa-portrait mr-2"></i> profile
+                                    </button>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-lg btn-block btn-dark vt323"
+                                        onclick="chooseCanvas('post', 1)">
+                                        <i class="fas fa-sticky-note mr-2"></i> post
+                                    </button>
+                                </div>
+                            </div>
+                            <button id="messenger" type="button" class="btn btn-lg btn-block btn-dark vt323 my-2"
+                                onclick="choosePlatform(2)">
+                                <i class="fab fa-facebook-messenger mr-2"></i> messenger
+                            </button>
+                            <div id="msgCanvasTypes" class="row my-2 d-none animated zoomInUp">
+                                <div class="col">
+                                    <button type="button" class="btn btn-lg btn-block btn-dark vt323"
+                                        onclick="chooseCanvas('messages', 2)">
+                                        <i class="fas fa-comments mr-2"></i> messages
+                                    </button>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-lg btn-block btn-dark vt323"
+                                        onclick="chooseCanvas('chat', 2)">
+                                        <i class="fas fa-comment-alt mr-2"></i> chat
+                                    </button>
+                                </div>
+                            </div>
+                            <button id="instagram" type="button" class="btn btn-lg btn-block btn-dark vt323 my-2"
+                                onclick="choosePlatform(3)">
+                                <i class="fab fa-instagram mr-2"></i> instagram
+                            </button>
+                            <div id="igCanvasTypes" class="row my-2 d-none animated zoomInUp">
+                                <div class="col">
+                                    <button type="button" class="btn btn-lg btn-block btn-dark vt323"
+                                        onclick="chooseCanvas('profile', 3)">
+                                        <i class="fas fa-portrait mr-2"></i>profile
+                                    </button>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-lg btn-block btn-dark vt323"
+                                        onclick="chooseCanvas('post', 3)">
+                                        <i class="fas fa-image mr-2"></i>post
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <legend class="vt323">Upload Image</legend>
+                            <input type="file" id="uploadImage">
+                            <div class="row my-2">
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-dark my-2" onclick="downloadMockup(this, 'mockupCanvas')">Download</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+body {
+    background-color: whitesmoke;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+/* FONTS */
+.overtherainbow {
+    font-family: 'Over the Rainbow', cursive;
+}
+
+.vt323 {
+    font-family: 'VT323', monospace;
+}
+
+/* COLORS */
+.tw-color {
+    background-color: #38A1F3;
+    color: #ffffff;
+}
+
+.fb-color {
+    background-color: #3B5998;
+    color: #ffffff;
+}
+
+/* CARD */
+.card-custom-height {
+    height: 70vh;
+}
+
+/* CANVAS */
+.canvas-size {
+    width: 80%;
+    height: 60vh;
+}
+
+/* RADIUS */
+.radius-50 {
+    border-radius: 50%;
+}
