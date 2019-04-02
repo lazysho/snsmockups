@@ -64,35 +64,35 @@ function drawTwitterProfile() {
         ctx.arc(60, 125, 35, 0, 2 * Math.PI);
         ctx.fill();
     }, false);
-    bgImg.src = "http://drive.google.com/uc?export=view&id=1R6WlFeLCNdhGp_G_AnCHCminzp_zb55X";
+    bgImg.src = "https://drive.google.com/uc?export=view&id=1R6WlFeLCNdhGp_G_AnCHCminzp_zb55X";
 
     var editProfile = new Image();
     //editProfile.crossOrigin = "anonymous";
     editProfile.addEventListener('load', function() {
         ctx.drawImage(editProfile, 0, 0, 375, 667);
     }, false);
-    editProfile.src = "http://drive.google.com/uc?export=view&id=1pa6D20353M9tmt3qjKOVHJfXJe9Y1wdG";
+    editProfile.src = "https://drive.google.com/uc?export=view&id=1pa6D20353M9tmt3qjKOVHJfXJe9Y1wdG";
 
     var backButton = new Image();
     //backButton.crossOrigin = "anonymous";
     backButton.addEventListener('load', function() {
         ctx.drawImage(backButton, 0, 0, 375, 667);
     }, false);
-    backButton.src = "http://drive.google.com/uc?export=view&id=1ns5o3qjsN2tnnoxw38fq9sBhqdruDD8K";
+    backButton.src = "https://drive.google.com/uc?export=view&id=1ns5o3qjsN2tnnoxw38fq9sBhqdruDD8K";
 
     var locationIcon = new Image();
     //locationIcon.crossOrigin = "anonymous";
     locationIcon.addEventListener('load', function() {
         ctx.drawImage(locationIcon, 0, 0, 375, 667);
     }, false);
-    locationIcon.src = "http://drive.google.com/uc?export=view&id=1692Wzwxkvo0mIQJANw2VKv3rHGmsy59M";
+    locationIcon.src = "https://drive.google.com/uc?export=view&id=1692Wzwxkvo0mIQJANw2VKv3rHGmsy59M";
 
     var linkIcon = new Image();
     //linkIcon.crossOrigin = "anonymous";
     linkIcon.addEventListener('load', function() {
         ctx.drawImage(linkIcon, 0, 0, 375, 667);
     }, false);
-    linkIcon.src = "http://drive.google.com/uc?export=view&id=1upq1nGdSzfIiOrEPYtoHPsbqAJ4eIq2W";
+    linkIcon.src = "https://drive.google.com/uc?export=view&id=1upq1nGdSzfIiOrEPYtoHPsbqAJ4eIq2W";
 
     // navbar
     var navbarImg = new Image();
@@ -100,7 +100,7 @@ function drawTwitterProfile() {
     navbarImg.addEventListener('load', function() {
         ctx.drawImage(navbarImg, 0, 0, 375, 667);
     }, false);
-    navbarImg.src = "http://drive.google.com/uc?export=view&id=1Lrr8Hx-AcxDtt8F5O0wg0GsQRhwYMKQU";
+    navbarImg.src = "https://drive.google.com/uc?export=view&id=1Lrr8Hx-AcxDtt8F5O0wg0GsQRhwYMKQU";
     
     // tabs
     var tabsImg = new Image();
@@ -108,7 +108,7 @@ function drawTwitterProfile() {
     tabsImg.addEventListener('load', function() {
         ctx.drawImage(tabsImg, 0, 0, 375, 667);
     }, false);
-    tabsImg.src = "http://drive.google.com/uc?export=view&id=1BDFwR6xcGjEZ1kxw8NbRSGpMPta-YZFi";
+    tabsImg.src = "https://drive.google.com/uc?export=view&id=1BDFwR6xcGjEZ1kxw8NbRSGpMPta-YZFi";
 }
 
 function downloadMockup(e, canvasId) {
