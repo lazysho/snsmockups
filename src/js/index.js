@@ -110,7 +110,12 @@ function drawTwitterProfile() {
     }, false);
     tabsImg.src = "https://drive.google.com/uc?export=view&id=1BDFwR6xcGjEZ1kxw8NbRSGpMPta-YZFi";*/
 
-    mergeImages(['assets/mockups/twitter/profile/tw-mobile-navbar.png', 'assets/mockups/twitter/profile/tw-mobile-tabs.png'])
+    mergeImages(['assets/mockups/twitter/profile/tw-mobile-bg-white.png', 
+                 'assets/mockups/twitter/profile/tw-mobile-navbar.png', 
+                 'assets/mockups/twitter/profile/tw-mobile-tabs.png',
+                 'assets/mockups/twitter/profile/tw-mobile-backtbn.png',
+                 'assets/mockups/twitter/profile/tw-mobile-editprofile.png',
+                 'assets/mockups/twitter/profile/tw-mobile-location.png'])
     .then(b64 => document.getElementById('imgMockup').src = b64);
 }
 
