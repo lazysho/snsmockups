@@ -34,9 +34,10 @@ img {
 }
 
 /* CANVAS */
-.canvas-size {
-    width: 375px;
-    height: 667px;
+.mockup-template-size {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
 }
 
 /* RADIUS */
