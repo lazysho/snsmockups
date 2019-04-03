@@ -130,8 +130,8 @@ function downloadMockup(mockupId) {
     document.getElementById("dl").click();
 }
 
-function downloadMockup(e, canvasId) {
-    var canvas = document.getElementById(canvasId)
+function downloadMockups(e, canvasId) {
+    var canvas = document.getElementById(canvasId);
     var image = canvas.toDataURL("image/png");
     e.href = image;
 }
