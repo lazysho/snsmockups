@@ -32,7 +32,7 @@ function chooseCanvas(canvasType, id) {
     // draw mockup
     if(id==0) {
         if(canvasType=="profile") {
-            
+            drawTwitterProfile();
         } else if(canvasType=="tweet") {
 
         }
@@ -45,58 +45,72 @@ function drawTwitterProfile() {
 
     // background and header elements
     var bgImg = new Image();
-    //bgImg.crossOrigin = "anonymous";
     bgImg.addEventListener('load', function() {
         ctx.drawImage(bgImg, 0, 0, 375, 667);
 
         // header
-        ctx.fillStyle = "#f5f5f5";
+        ctx.fillStyle = "#a9a9a9";
         ctx.fillRect(0, 0, 375, 125);
+
+        // header text
+        ctx.font = "20px Arial";
+        ctx.fillStyle = "#ffffff";
+        ctx.fillText("your header here", 110, 65);
 
         // icon border
         ctx.fillStyle = "#ffffff";
         ctx.beginPath();
-        ctx.arc(60, 125, 40, 0, 2 * Math.PI);
+        ctx.arc(50, 125, 40, 0, 2 * Math.PI);
         ctx.fill();
 
-        ctx.fillStyle = "#f5f5f5";
+        ctx.fillStyle = "#a9a9a9";
         ctx.beginPath();
-        ctx.arc(60, 125, 35, 0, 2 * Math.PI);
+        ctx.arc(50, 125, 35, 0, 2 * Math.PI);
         ctx.fill();
+
+        // name
+        ctx.font = "bold 20px Arial";
+        ctx.fillStyle = "#000000";
+        ctx.fillText("yourname", 14, 190);
+
+        // username
+        ctx.font = "14px Arial";
+        ctx.fillStyle = "#AAB8C2";
+        ctx.fillText("@username", 14, 210);
+
+        // description
+        ctx.font = "14px Arial";
+        ctx.fillStyle = "#000000";
+        ctx.fillText("description here wooh", 14, 240);
     }, false);
     bgImg.src = "assets/mockups/twitter/profile/tw-mobile-bg-white.png";
 
     var editProfile = new Image();
-    //editProfile.crossOrigin = "anonymous";
     editProfile.addEventListener('load', function() {
         ctx.drawImage(editProfile, 0, 0, 375, 667);
     }, false);
     editProfile.src = "assets/mockups/twitter/profile/tw-mobile-editprofile.png";
 
     var backButton = new Image();
-    //backButton.crossOrigin = "anonymous";
     backButton.addEventListener('load', function() {
         ctx.drawImage(backButton, 0, 0, 375, 667);
     }, false);
     backButton.src = "assets/mockups/twitter/profile/tw-mobile-backbtn.png";
 
     var locationIcon = new Image();
-    //locationIcon.crossOrigin = "anonymous";
     locationIcon.addEventListener('load', function() {
         ctx.drawImage(locationIcon, 0, 0, 375, 667);
     }, false);
     locationIcon.src = "assets/mockups/twitter/profile/tw-mobile-location.png";
 
     var linkIcon = new Image();
-    //linkIcon.crossOrigin = "anonymous";
     linkIcon.addEventListener('load', function() {
         ctx.drawImage(linkIcon, 0, 0, 375, 667);
     }, false);
-    linkIcon.src = "assets/mockups/twitter/profile/tw-mobile-location.png";
+    linkIcon.src = "assets/mockups/twitter/profile/tw-mobile-link.png";
 
     // navbar
     var navbarImg = new Image();
-    //navbarImg.crossOrigin = "anonymous";
     navbarImg.addEventListener('load', function() {
         ctx.drawImage(navbarImg, 0, 0, 375, 667);
     }, false);
@@ -104,55 +118,21 @@ function drawTwitterProfile() {
     
     // tabs
     var tabsImg = new Image();
-    //tabsImg.crossOrigin = "anonymous";
     tabsImg.addEventListener('load', function() {
         ctx.drawImage(tabsImg, 0, 0, 375, 667);
     }, false);
     tabsImg.src = "assets/mockups/twitter/profile/tw-mobile-tabs.png";
-
-    mergeImages(['assets/mockups/twitter/profile/tw-mobile-bg-white.png', 
-                 'assets/mockups/twitter/profile/tw-mobile-navbar.png', 
-                 'assets/mockups/twitter/profile/tw-mobile-tabs.png',
-                 'assets/mockups/twitter/profile/tw-mobile-backbtn.png',
-                 'assets/mockups/twitter/profile/tw-mobile-editprofile.png',
-                 'assets/mockups/twitter/profile/tw-mobile-location.png'])
-    .then(b64 => document.getElementById('imgMockup').src = b64);
 }
 
-function downloadMockup(mockupId) {
-    /*var canvas = document.getElementById(imgId)
-    var image = canvas.toDataURL("image/png");
-    e.href = image;*/
-
-    var image = document.getElementById(mockupId);
-    document.getElementById("dl").href= image.src;
-    document.getElementById("dl").setAttribute("download", "mockup");
-    document.getElementById("dl").click();
-}
-
-function downloadMockups(e, canvasId) {
+function downloadMockup(canvasId) {
     var canvas = document.getElementById(canvasId);
     var image = canvas.toDataURL("image/png;base64");
-    document.getElementById("dl").href= image;
-    document.getElementById("dl").setAttribute("download", "mockup");
-    document.getElementById("dl").click();
-}
-
-function createCORSRequest(method, url) {
-    var xhr = new XMLHttpRequest();
-    if("withCredentails" in xhr) {
-        xhr.open(method, url, true);
-    } else if(typeof XDomainRequest !="undefined") {
-        xhr = new XDomainRequest();
-        xhr.open(method, url);
-    } else {
-        xhr = null;
-    }
-
-    return xhr;
+    document.getElementById("mockupDlLink").href= image;
+    document.getElementById("mockupDlLink").setAttribute("download", "mockup");
+    document.getElementById("mockupDlLink").click();
 }
 
 // root
 $(document).ready(function () {
-    drawTwitterProfile();
+    //drawTwitterProfile();
 });

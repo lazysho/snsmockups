@@ -31,13 +31,13 @@
             </div>
             <div class="row mt-0 mx-auto">
                 <div class="col-12 col-lg-8">
-                    <div id="noCanvasChosen" class="card bg-transparent card-custom-height my-2 mx-auto">
+                    <div id="noCanvasChosen" class="card bg-transparent card-custom-height my-2 mx-auto d-none">
                         <div class="card-body mt-5 pt-5">
                             <h1 class="display-4 text-muted text-center vt323 mt-5 pt-5">create canvas</h1>
                             <p class="text-muted text-center vt323">to create your social media mock up, you need a canvas</p>
                         </div>
                     </div>
-                    <div id="canvasCont" class="card my-2 mx-auto animated bounceInDown d-none">
+                    <div id="canvasCont" class="card my-2 mx-auto animated bounceInDown">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-12">
@@ -58,7 +58,7 @@
                             </div>
                             <hr>
                             <div class="row">
-                                <a id="dl" href="" class="mx-auto" download><img id="imgMockup" class="bg-dark mockup-template-size mx-auto"></a>
+                                <a id="mockupDlLink" href="" class="mx-auto d-none" download></a>
                                 <canvas id="mockupCanvas" class="bg-dark mx-auto" width="375px" height="667px"></canvas>
                             </div>
                         </div>
@@ -147,7 +147,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card my-2">
+                    <div class="card my-2 d-none">
                         <div class="card-body">
                             <legend class="vt323">Upload Image</legend>
                             <input type="file" id="uploadImage">
