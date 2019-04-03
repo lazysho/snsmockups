@@ -113,7 +113,7 @@ function drawTwitterProfile() {
     mergeImages(['assets/mockups/twitter/profile/tw-mobile-bg-white.png', 
                  'assets/mockups/twitter/profile/tw-mobile-navbar.png', 
                  'assets/mockups/twitter/profile/tw-mobile-tabs.png',
-                 'assets/mockups/twitter/profile/tw-mobile-backtbn.png',
+                 'assets/mockups/twitter/profile/tw-mobile-backbtn.png',
                  'assets/mockups/twitter/profile/tw-mobile-editprofile.png',
                  'assets/mockups/twitter/profile/tw-mobile-location.png'])
     .then(b64 => document.getElementById('imgMockup').src = b64);
