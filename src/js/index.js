@@ -40,7 +40,7 @@ function chooseCanvas(canvasType, id) {
 }
 
 function drawTwitterProfile() {
-    var canvas = document.getElementById("mockupCanvas");
+    /*var canvas = document.getElementById("mockupCanvas");
     var ctx = canvas.getContext("2d");
 
     // background and header elements
@@ -108,7 +108,10 @@ function drawTwitterProfile() {
     tabsImg.addEventListener('load', function() {
         ctx.drawImage(tabsImg, 0, 0, 375, 667);
     }, false);
-    tabsImg.src = "https://drive.google.com/uc?export=view&id=1BDFwR6xcGjEZ1kxw8NbRSGpMPta-YZFi";
+    tabsImg.src = "https://drive.google.com/uc?export=view&id=1BDFwR6xcGjEZ1kxw8NbRSGpMPta-YZFi";*/
+
+    mergeImages(['assets/mockups/twitter/profile/tw-mobile-navbar.png', 'assets/mockups/twitter/profile/tw-mobile-tabs.png'])
+    .then(b64 => document.getElementById('imgMockup').src = b64);
 }
 
 function downloadMockup(e, canvasId) {
