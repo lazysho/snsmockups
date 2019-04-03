@@ -119,13 +119,15 @@ function drawTwitterProfile() {
     .then(b64 => document.getElementById('imgMockup').src = b64);
 }
 
-function downloadMockup(e, canvasId) {
-    /*var canvas = document.getElementById(canvasId)
+function downloadMockup(mockupId) {
+    /*var canvas = document.getElementById(imgId)
     var image = canvas.toDataURL("image/png");
     e.href = image;*/
 
-    var image = document.getElementById(canvasId);
+    var image = document.getElementById(mockupId);
     document.getElementById("dl").href= image.src;
+    document.getElementById("dl").setAttribute("download", "mockup");
+    document.getElementById("dl").click();
 }
 
 function createCORSRequest(method, url) {
