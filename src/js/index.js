@@ -120,9 +120,12 @@ function drawTwitterProfile() {
 }
 
 function downloadMockup(e, canvasId) {
-    var canvas = document.getElementById(canvasId)
+    /*var canvas = document.getElementById(canvasId)
     var image = canvas.toDataURL("image/png");
-    e.href = image;
+    e.href = image;*/
+
+    var image = document.getElementById(canvasId);
+    document.getElementById("dl").href= image.src;
 }
 
 function createCORSRequest(method, url) {
