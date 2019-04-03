@@ -40,7 +40,7 @@ function chooseCanvas(canvasType, id) {
 }
 
 function drawTwitterProfile() {
-    /*var canvas = document.getElementById("mockupCanvas");
+    var canvas = document.getElementById("mockupCanvas");
     var ctx = canvas.getContext("2d");
 
     // background and header elements
@@ -64,35 +64,35 @@ function drawTwitterProfile() {
         ctx.arc(60, 125, 35, 0, 2 * Math.PI);
         ctx.fill();
     }, false);
-    bgImg.src = "https://drive.google.com/uc?export=view&id=1R6WlFeLCNdhGp_G_AnCHCminzp_zb55X";
+    bgImg.src = "assets/mockups/twitter/profile/tw-mobile-bg-white.png";
 
     var editProfile = new Image();
     //editProfile.crossOrigin = "anonymous";
     editProfile.addEventListener('load', function() {
         ctx.drawImage(editProfile, 0, 0, 375, 667);
     }, false);
-    editProfile.src = "https://drive.google.com/uc?export=view&id=1pa6D20353M9tmt3qjKOVHJfXJe9Y1wdG";
+    editProfile.src = "assets/mockups/twitter/profile/tw-mobile-editprofile.png";
 
     var backButton = new Image();
     //backButton.crossOrigin = "anonymous";
     backButton.addEventListener('load', function() {
         ctx.drawImage(backButton, 0, 0, 375, 667);
     }, false);
-    backButton.src = "https://drive.google.com/uc?export=view&id=1ns5o3qjsN2tnnoxw38fq9sBhqdruDD8K";
+    backButton.src = "assets/mockups/twitter/profile/tw-mobile-backbtn.png";
 
     var locationIcon = new Image();
     //locationIcon.crossOrigin = "anonymous";
     locationIcon.addEventListener('load', function() {
         ctx.drawImage(locationIcon, 0, 0, 375, 667);
     }, false);
-    locationIcon.src = "https://drive.google.com/uc?export=view&id=1692Wzwxkvo0mIQJANw2VKv3rHGmsy59M";
+    locationIcon.src = "assets/mockups/twitter/profile/tw-mobile-location.png";
 
     var linkIcon = new Image();
     //linkIcon.crossOrigin = "anonymous";
     linkIcon.addEventListener('load', function() {
         ctx.drawImage(linkIcon, 0, 0, 375, 667);
     }, false);
-    linkIcon.src = "https://drive.google.com/uc?export=view&id=1upq1nGdSzfIiOrEPYtoHPsbqAJ4eIq2W";
+    linkIcon.src = "assets/mockups/twitter/profile/tw-mobile-location.png";
 
     // navbar
     var navbarImg = new Image();
@@ -100,7 +100,7 @@ function drawTwitterProfile() {
     navbarImg.addEventListener('load', function() {
         ctx.drawImage(navbarImg, 0, 0, 375, 667);
     }, false);
-    navbarImg.src = "https://drive.google.com/uc?export=view&id=1Lrr8Hx-AcxDtt8F5O0wg0GsQRhwYMKQU";
+    navbarImg.src = "assets/mockups/twitter/profile/tw-mobile-navbar.png";
     
     // tabs
     var tabsImg = new Image();
@@ -108,7 +108,7 @@ function drawTwitterProfile() {
     tabsImg.addEventListener('load', function() {
         ctx.drawImage(tabsImg, 0, 0, 375, 667);
     }, false);
-    tabsImg.src = "https://drive.google.com/uc?export=view&id=1BDFwR6xcGjEZ1kxw8NbRSGpMPta-YZFi";*/
+    tabsImg.src = "assets/mockups/twitter/profile/tw-mobile-tabs.png";
 
     mergeImages(['assets/mockups/twitter/profile/tw-mobile-bg-white.png', 
                  'assets/mockups/twitter/profile/tw-mobile-navbar.png', 
@@ -128,6 +128,12 @@ function downloadMockup(mockupId) {
     document.getElementById("dl").href= image.src;
     document.getElementById("dl").setAttribute("download", "mockup");
     document.getElementById("dl").click();
+}
+
+function downloadMockup(e, canvasId) {
+    var canvas = document.getElementById(canvasId)
+    var image = canvas.toDataURL("image/png");
+    e.href = image;
 }
 
 function createCORSRequest(method, url) {
