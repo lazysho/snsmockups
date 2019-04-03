@@ -132,8 +132,10 @@ function downloadMockup(mockupId) {
 
 function downloadMockups(e, canvasId) {
     var canvas = document.getElementById(canvasId);
-    var image = canvas.toDataURL("image/png");
-    e.href = image;
+    var image = canvas.toDataURL("image/png;base64");
+    document.getElementById("dl").href= image;
+    document.getElementById("dl").setAttribute("download", "mockup");
+    document.getElementById("dl").click();
 }
 
 function createCORSRequest(method, url) {
