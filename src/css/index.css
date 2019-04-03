@@ -35,8 +35,8 @@ img {
 
 /* CANVAS */
 .canvas-size {
-    width: 80%;
-    height: 80%;
+    width: 375px;
+    height: 667px;
 }
 
 /* RADIUS */
