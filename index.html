@@ -22,6 +22,7 @@
         <script src="https://unpkg.com/merge-images"></script>
         <script src="src/js/FileSaver.js"></script>
         <script src="src/js/canvas-toBlob.js"></script>
+        <script src="src/js/fontfaceobserver.js"></script>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Eczar|Over+the+Rainbow|VT323" rel="stylesheet">
@@ -63,8 +64,7 @@
                             </div>
                             <hr>
                             <div class="row mx-auto">
-                                <a id="mockupDlLink" href="" class="mx-auto d-none" download></a>
-                                <!--<canvas id="mockupCanvas" class="bg-dark mx-auto d-none" width="750px" height="1334px"></canvas>-->
+                                <canvas id="mockupCanvas" class="canvas-border mockup-fit mx-auto d-none" width="750px" height="1334px"></canvas>
                                 <canvas id="liveCanvas" class="canvas-border mockup-fit mx-auto" height="534px"></canvas>
                             </div>
                         </div>

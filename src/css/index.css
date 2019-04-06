@@ -9,12 +9,18 @@ img {
   }
 
 /* FONTS */
-.overtherainbow {
-    font-family: 'Over the Rainbow', cursive;
-}
-
 .vt323 {
     font-family: 'VT323', monospace;
+}
+
+@font-face {
+    font-family: "Helvetica Neue Medium";
+    src: url('../../assets/fonts/HelveticaNeue-Medium.otf');
+}
+
+@font-face {
+    font-family: "Helvetica Neue Light";
+    src: url('../../assets/fonts/HelveticaNeue-Light.otf');
 }
 
 /* COLORS */
