@@ -43,10 +43,10 @@ function chooseCanvas(canvasType, id) {
 }
 
 var myTwitterProfile = false;
-var profileVerified = true;
-var pinnedTweetImage = false;
+var profileVerified = false;
+var pinnedTweetImage = true;
 var twIsFollowing = false;
-var twIsFollowingYou = true;
+var twIsFollowingYou = false;
 
 function drawTwitterProfile() {
     var canvas = new fabric.Canvas("mockupCanvas", {
@@ -576,7 +576,7 @@ function drawTwitterProfileLivePreview() {
     tweetName.hasControls = false;
     canvas.add(tweetName);
     //canvas.setActiveObject(tweetName);
-    fontLoader(canvas, tweetName, "Helvetica Neue Medium");
+    fontLoader(canvas, tweetName, "Helvetica Neue Light");
 
     // tweet username
     var tweetUsername = new fabric.IText("@username", {
@@ -837,7 +837,7 @@ function drawTwitterProfileLivePreview() {
 
         tweetName02.hasControls = false;
         canvas.add(tweetName02);
-        fontLoader(canvas, tweetName02, "Helvetica Neue Medium");
+        fontLoader(canvas, tweetName02, "Helvetica Neue Light");
     
         // tweet username
         tweetUsername02 = new fabric.IText("@username", {
