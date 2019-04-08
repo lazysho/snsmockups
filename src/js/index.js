@@ -42,11 +42,11 @@ function chooseCanvas(canvasType, id) {
     }
 }
 
-var myTwitterProfile = false;
+var myTwitterProfile = true;
 var profileVerified = false;
 var pinnedTweetImage = true;
 var twIsFollowing = false;
-var twIsFollowingYou = false;
+var twIsFollowingYou = true;
 
 function drawTwitterProfile() {
     var canvas = new fabric.Canvas("mockupCanvas", {
