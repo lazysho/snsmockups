@@ -252,8 +252,8 @@ function drawTwitterProfileLivePreview() {
     name.lockUniScaling = true;
     name.lockRotation = true;
     name.hasControls = false;
-    name.hiddenTextArea.style.fontSize = 16;
-    name.enterEditing();
+    name.initHiddenTextarea();
+    //name.enterEditing();
     canvas.add(name);
     canvas.setActiveObject(name);
     fontLoader(canvas, name, "Helvetica Neue Medium");
