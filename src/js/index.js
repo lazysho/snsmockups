@@ -53,6 +53,9 @@ function drawTwitterProfile() {
         backgroundColor: 'rgb(86, 86, 86)'
     });
 
+    // canvas configs
+    canvas.allowTouchScrolling = true;
+
     // set background color
     canvas.setBackgroundColor("rgb(255, 255, 255");
 
@@ -249,8 +252,10 @@ function drawTwitterProfileLivePreview() {
     name.lockUniScaling = true;
     name.lockRotation = true;
     name.hasControls = false;
+    name.hiddenTextArea.style.fontSize = 16;
+    name.enterEditing();
     canvas.add(name);
-    //canvas.setActiveObject(name);
+    canvas.setActiveObject(name);
     fontLoader(canvas, name, "Helvetica Neue Medium");
 
     // verified
